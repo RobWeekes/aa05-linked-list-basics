@@ -14,11 +14,9 @@ class LinkedList {
 
     addToHead(val) {
         const newNode = new LinkedListNode(val);
-        newNode.next = this.head;
-        this.head = newNode;
+        newNode.next = this.head; // if there was a head before adding, bump it to next
+        this.head = newNode; // assign new node as head
         this.length++;
-        // this.next = this.value;
-        // this.head = new LinkedListNode(val);
     }
 
     addToTail(val) {
